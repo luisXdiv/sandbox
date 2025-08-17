@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renova Software Sandbox</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+
+<!-- Particles container -->
+<div id="particles-js"></div>
+
+<div class="container">
+  <h1>Renova Software Sandbox</h1>
+  <p class="subtitle">Upload your script/DLL & get your project running faster</p>
+
+  <form id="uploadForm" enctype="multipart/form-data">
+    <label class="custom-file">
+      <input type="file" id="fileInput" name="file" required>
+      <span class="file-label">Choose a file...</span>
+    </label>
+    <button type="submit" class="btn">Upload your file</button>
+  </form>
+
+  <div id="result" class="result"></div>
+  <p class="owner">
+  &lt;/&gt; Developed By 
+  <a class="owner" href="https://discord.com/users/1337646456521363547" target="_blank">Luis Xitada</a>
+</p>
+</div>
+
+<script src="script.js"></script>
+<script>
+/* Particles Snow effect */
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 100, "density": {"enable":true,"value_area":800} },
+    "color": { "value": "#ffffff" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.7, "random": true },
+    "size": { "value": 4, "random": true },
+    "line_linked": { "enable": false },
+    "move": { "enable": true, "speed": 1, "direction": "bottom", "random": true, "straight": false, "out_mode": "out" }
+  },
+  "interactivity": {
+    "events": { "onhover": {"enable": false}, "onclick": {"enable": false} }
+  },
+  "retina_detect": true
+});
+</script>
+
+</body>
+</html>
