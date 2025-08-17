@@ -11,9 +11,9 @@ form.addEventListener('submit', async e=>{
 
     resultDiv.innerHTML = 'Uploading...';
     try{
-   const res = await fetch('https://abcd1234.ngrok.io/upload', {
-    method:'POST',
-    body:formData
+const res = await fetch('https://ba88f0f00914.ngrok-free.app/upload', {
+    method: 'POST',
+    body: formData
 });
         const data = await res.json();
         if(data.status === 'success'){
@@ -26,4 +26,5 @@ form.addEventListener('submit', async e=>{
         resultDiv.innerHTML = `<p>Error: ${err}</p>`;
     }
 });
+
 
