@@ -11,10 +11,10 @@ form.addEventListener('submit', async e=>{
 
     resultDiv.innerHTML = 'Uploading...';
     try{
-        const res = await fetch('http://127.0.0.1:5000/upload',{
-            method:'POST',
-            body:formData
-        });
+   const res = await fetch('https://abcd1234.ngrok.io/upload', {
+    method:'POST',
+    body:formData
+});
         const data = await res.json();
         if(data.status === 'success'){
             resultDiv.innerHTML = `<p>${data.message}</p>
@@ -26,3 +26,4 @@ form.addEventListener('submit', async e=>{
         resultDiv.innerHTML = `<p>Error: ${err}</p>`;
     }
 });
+
